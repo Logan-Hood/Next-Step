@@ -396,7 +396,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 75vh;
     text-align: center;
   }
   
@@ -409,7 +408,7 @@ body {
     position: relative;
     width: 90%;
     max-width: 400px;
-    height: 100%;
+    height: 75vh;
     overflow: hidden;
   }
   
