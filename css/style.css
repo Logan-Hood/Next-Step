@@ -1,301 +1,287 @@
-/* All HTML Files */
+/* Styling for all pages */
+
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #233C6C;
-  color: #FFFFFF;
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: #F5F5F5;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* Styling for disabled links */
+.disabled-link {
+  pointer-events: none; /* Disable clicking */
+  color: gray; /* Optional: change text color to gray */
+  cursor: default; /* Optional: change cursor to default */
+  opacity: 0.5; /* Optional: make it look visually "disabled" */
+}
 
 
-.header-container {
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 24px;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 48px;
-  }
-
-  .header-logo {
-    width: 135px;
-    height: auto;
-  }
-  
-  .close-button {
-    color: #FFFFFF;
-    font-size: 48px;
-    text-decoration: none;
-  }
-
-
-
-
-
-
-  /* Index.HTML - Login Page */
-  .login-container {
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    min-height: 75vh;
-    margin-top: 120px;
-  }
-  
-  .app-logo {
-    margin-bottom: 30px;
-  }
-  
-  .app-title {
-    font-family: 'Just Another Hand', cursive;
-    font-size: 64px;
-    margin: 0;
-  }
-  
-  .logo {
-    width: 120px;
-    height: auto;
-    margin: 20px 0;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .input-group {
+  /* Top Navbar */
+  .top-navbar {
+    position: top;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     background-color: #FFFFFF;
-    color: #000000;
-    border-radius: 8px;
+    border-bottom: #EDB32B solid 3px;
     padding: 10px;
     width: 100%;
-    box-sizing: border-box;
+  }
+
+
+  .hamburger-menu, .profile-icon, .logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
   
-  .input-group input {
-    border: none;
-    outline: none;
+  .search-bar {
     flex-grow: 1;
-    font-size: 16px;
-  }
-  
-  .input-group .icon {
-    font-size: 18px;
-    margin-left: 10px;
-  }
-  
-  .form-options {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 13px;
-    color: #FFFFFF;
-  }
-  
-  .form-options label {
-    display: flex;
-    align-items: center;
-  }
-  
-  .form-options input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
-  .forgot-password {
-    color: #FFFFFF;
-    text-decoration: underline;
-  }
-  
-  .login-button {
-    background-color: #7AA6EA;
-    color: #FFFFFF;
-    font-family: 'Inter', Medium;
-    font-size: 16px;
-    padding: 12px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .login-button:hover {
-    background-color: #6B95D2;
-  }
-
-
-
-
-
-
-
-
-    /* Ready.html */
-    .prompt-container {
-      text-align: center;
-      width: 90%;
-      max-width: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 75vh;
-      background-color: #7AA6EA;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-  
-    .prompt {
-      height: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-    }
-    
-    .prompt-title {
-      font-family: 'Just Another Hand', cursive;
-      font-size: 32px;
-    }
-    
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    
-    .response-button {
-      background-color: #FFFFFF;
-      color: #000000;
-      font-size: 24px;
-      padding: 50px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    
-    .response-button:hover {
-      background-color: #F0F0F0;
-    }
-    
-    .separator {
-      font-size: 14px;
-      color: #FFFFFF;
-    }
-
-    .profile-link {
-      font-size: 14px;
-      display: block;
-      margin-top: 10px;
-      color: #FFFFFF;
-    }
-
-    
-
-
-
-  /* location.html, gender.html, comms.html */
-
-  /* Progress Circles */
-  .progress {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .progress-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    color: #000000;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 10px;
-  }
-  
-  .progress-circle.active {
-    background-color: #7AA6EA;
-    color: #FFFFFF;
-  }
-
-  .location-form, .multi-select-form {
-    display: flex;
-    flex-direction: column;
-    height: 75vh;
-  }
-
-  .button-group2 {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 20px;
-  }
-  
-  .back-button, .next-button, .back-button2, .next-button2, .back-button3, .next-button3 {
-    width: 45%;
-    padding: 10px;
-    font-size: 18px;
-    background-color: #7AA6EA;
-    border: none;
+    padding: 5px;
+    border: 1px solid #979797;
     border-radius: 5px;
-    color: #FFFFFF;
+    font-size: 13px;
+    background-color: #F5F5F5;
+  }
+
+  .logo1 {
+    width: 53px;
+    height: 30px;
+    margin-left: 8px;
+}
+
+/* Hamburger Menu and Profile overlay styles */
+.menu-overlay,
+.profile-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    width: 50%; /* Takes up half the screen width */
+    height: 100%; /* Full height of the screen */
+    background-color: white; /* White background */
+    z-index: 999; /* Above all other content */
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateX(-100%); /* Initially off-screen for menu */
+    transition: transform 0.3s ease; /* Smooth slide-in effect */
+}
+
+/* Hamburger menu specific styles */
+.menu-overlay {
+    left: 0; /* Anchored to the left */
+}
+
+/* Profile menu specific styles */
+.profile-overlay {
+    right: 0; /* Anchored to the right */
+    transform: translateX(100%); /* Initially off-screen for profile menu */
+}
+
+/* Active state for sliding in */
+.menu-overlay.active {
+    display: block;
+    transform: translateX(0); /* Slide in to position */
+}
+
+.profile-overlay.active {
+    display: block;
+    transform: translateX(0); /* Slide in to position */
+}
+
+/* Close button */
+.close-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
     cursor: pointer;
+    color: black;
+}
+
+
+/* Overlay link styles */
+.menu-overlay a,
+.profile-overlay a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+.menu-overlay ul,
+.profile-overlay ul {
+    list-style: none;
+    padding: 0px;
+}
+
+/* Profile Overlay - Right */
+.profile-overlay {
+  position: fixed;
+  top: 0;
+  right: -50%; /* Initially hidden */
+  width: 50%; /* Half the screen */
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.3s ease-in-out; /* Slide in animation */
+}
+
+/* Show Menu Overlay */
+.menu-overlay.active {
+  left: 0; /* Slide in from the left */
+}
+
+/* Show Profile Overlay */
+.profile-overlay.active {
+  right: 0; /* Slide in from the right */
+}
+
+/* Shared Overlay Content */
+.close-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+ul li a img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.badge {
+  background-color: #e2a315;
+  color: #000000;
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin-left: 10px;
+}
+
+  /* Bottom Navbar */
+  .bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #EDB32B;
+    padding: 10px 0;
   }
   
-  .back-button, .next-button, .back-button2, .next-button2, .back-button3, .next-button3 {
-    background-color: #5793D3;
+  .bottom-navbar a {
+    text-align: center;
+  }
+  
+  .bottom-navbar img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .disabled-link {
+    pointer-events: none;
+    opacity: 0.5;
   }
 
 
-  /* Form Section - location.html only */
-.page-title {
-  font-family: 'Just Another Hand', cursive;
-  font-size: 32px;
-  margin: 10px 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the login page or index.html */
+.background {
+  background-image: url('../images/background1.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.label {
-  display: block;
-  font-size: 18px;
-  margin: 20px 0 5px;
+.login-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 360px;
+  color: #FFFFFF;
 }
 
-.input, .select {
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #FFFFFF;
-  border-radius: 5px;
-  font-size: 16px;
+.logo2 {
+  width: 175px;
+  height: 99px;
 }
 
-.select {
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+input[type="email"], input[type="password"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #FFFFFF;
+  font-size: 13px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: none;
   border-radius: 5px;
-  font-size: 16px;
-  background-color: #FFFFFF;
+  outline: none;
+}
+
+::placeholder {
+  color: #707070;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #EDB32B;
   color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-link {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #FFFFFF;
 }
 
 
@@ -304,462 +290,708 @@ body {
 
 
 
-  /* gender.html & comms.html */
 
-  /* Checkbox Group */
-  .checkbox-group {
+
+
+
+
+
+
+
+
+
+
+  /* Stlyles for the Homepage or dash.html */
+
+  /* Dashboard Section */
+  .dashboard {
+    text-align: center;
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #EDB32B;
+    width: 100%;
+  }
+  
+  .dashboard h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .dashboard p {
+    font-size: 18px;
+    color: #707070;
+    margin-bottom: 8px;
+  }
+  
+  .dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .action {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: #000000;
+  }
+  
+  .action img {
+    width: 24px;
+    height: 24px;  
+  }
+
+  
+  .badge2 {
+    background-color: #e2a315;
+    color: #000000;
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin-left: 2px;
+  }
+
+
+
+
+  /* Saved Projects Section */
+  .saved-projects {
+    overflow: scroll;
+    margin-bottom: 56px;
+    width: 100%;
+  }
+  
+  .project {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #979797;
+    border-top: 1px solid #979797;
     margin-bottom: 20px;
   }
   
-  .checkbox-option {
-    font-size: 24px;
-    margin: 10px 0;
-    cursor: pointer;
-  }
-  
-  .checkbox-option input {
-    margin-right: 10px;
-    transform: scale(2.2);
-    cursor: pointer;
+  .project-image {
+    width: 100%;
   }
 
-
-
-
-
-
-
-/* Found.html - Found Container */
-.found-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 75vh;
-  background-color: #7AA6EA; /* Light blue background */
-  text-align: center;
-  border-radius: 10px;
-}
-
-.found-title {
-  font-family: 'Just Another Hand', cursive;
-  font-size: 32px;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-}
-
-.found-subtitle {
-  font-family: 'Inter', Medium;
-  font-size: 24px;
-  color: #FFFFFF;
-  margin-bottom: 30px;
-}
-
-.found-button {
-  font-family: 'Inter', Medium;
-  font-size: 16px;
-  padding: 12px;
-  color: #FFFFFF;
-  background-color: #233C6C;
-  border: 2px solid #FFFFFF;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  width: 90%;
-}
-
-.found-button:hover {
-  background-color: #FFFFFF;
-  color: #7AA6EA;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-  /* this is for sponsor.html */
-
-
-  /* Carousel Container */
-  .carousel-container {
+  .project-info {
+    padding: 10px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-
-/* Carousel Cards */
-  .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 90%;
-    max-width: 400px;
-    height: 75vh;
-    overflow: hidden;
-  }
-  
-  .carousel-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #7AA6EA;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    transform: scale(0.9);
-    opacity: 0;
-    transition: transform 0.4s, opacity 0.4s;
-  }
-  
-  .carousel-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .carousel-card h2, .rating {
-    font-family: 'Inter', Medium;
-    font-size: 24px;
-    color: #ffffff;
-    margin: 10px 0;
-    margin-left: 24px;
-  }
-  
-  .carousel-card li {
-    font-family: 'Inter', Light;
-    font-size: 16px;
-    color: #ffffff;
-  }
-  
-  ul {
-    list-style-type: disc; /* Default bullet points */
-    padding-left: 20px;
-    color: #FFFFFF; /* Matches the text color */
-    font-size: 16px; /* Adjust size if needed */
-  }
-  
-  ul ul {
-    list-style-type: circle; /* Nested bullet points use circles */
-    margin-left: 20px;
-  }
-  
-  .no-bullets {
-    list-style-type: none; /* Removes the bullet points */
-    padding-left: 0; /* Removes default padding */
-    margin-left: 24px; /* Optional: adjust margin */
-    text-align: left; /* Aligns the text to the left */
-  }
-  
-  .no-bullets ul {
-    list-style-type: none; /* Ensures nested lists also have no bullets */
-    padding-left: 0; /* Aligns nested lists to the left as well */
-  }
-
-  .no-bullets li {
-    text-align: left; /* Ensures each item is left-aligned */
-  }
-
-
-  /* Buttons */
-  .carousel-buttons {
-    display: flex;
     justify-content: space-between;
-    width: 150px;
-    margin-top: 20px;
-  }
-  
-  .swipe-button {
-    background-color: #FFFFFF;
-    color: #7AA6EA;
-    font-size: 24px;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-  }
-  
-  .swipe-button:hover {
-    transform: scale(1.1);
+    height: 100%;
   }
 
-  .done-button {
-    font-family: 'Inter', Medium;
-    font-size: 16px;
-    padding: 12px;
-    color: #FFFFFF;
-    background-color: #7AA6EA;
-    border: 2px solid #FFFFFF;
-    border-radius: 20px;
+  .project-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .project-info p {
+    font-size: 14px;
+    color: #707070;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .view-button {
+    align-self: flex-end;
+    background-color: #EDB32B;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    width: 45%;
-    margin-top: 16px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 25%;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stlyles for the Explore page or explore.html */
+
+  /* Dashboard Section */
+  .dashboard2 {
+    text-align: center;
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #EDB32B;
+    width: 100%;
+  }
+  
+  .dashboard2 h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  
+  .dashboard-actions2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
     margin-bottom: 16px;
   }
+  
+  .action2 {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: #000000;
+  }
 
-  .done-button:hover {
-    background-color: #6B95D2;
+  /* Saved Projects Section */
+  .saved-projects2 {
+    overflow: scroll;
+    margin-bottom: 56px;
+    width: 100%;
+  }
+  
+  .project2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #979797;
+    border-top: 1px solid #979797;
+    margin-bottom: 20px;
+  }
+  
+  .project-image2 {
+    width: 100%;
+  }
+
+  .project-info2 {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .project-info2 h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .project-info2 p {
+    font-size: 14px;
+    color: #707070;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .view-button2 {
+    align-self: flex-start;
+    background-color: #EDB32B;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 25%;
   }
 
 
 
 
 
-/* done.html */
 
-.button-group3 {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 
-.nav-button {
-  font-family: 'Inter', Medium;
-  font-size: 16px;
-  color: #FFFFFF;
-  background-color: #7AA6EA;
-  border: 2px solid #FFFFFF;
-  border-radius: 25px;
-  padding: 10px 20px;
-  text-decoration: none;
+
+
+
+
+
+
+
+
+
+  /* Stlyles for the step 1 of posting a project or upload1.html */
+    /* Header with Next Step and Close Icon */
+    .upload-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      background-color: #000;
+      width: 100%;
+    }
+
+    .upload-header h2 {
+      color: #fff;
+      font-size: 18px;
+      margin: 0;
+      font-weight: normal;
+    }
+
+    .upload-header .close-icon {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      margin-left: 16px;
+    }
+
+    .upload-header a {
+      text-decoration: none;
+    }
+
+    .upload-header button {
+      background-color: #EDB32B;
+      border: none;
+      color: #000;
+      padding: 5px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 30px; /* Default for rounded edges */
+      border-top-left-radius: 0; /* 90-degree angle at top-left */
+      margin-right: 16px;
+    }
+
+    /* Main WIP Section */
+    .upload-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #000000;
+      margin-bottom: 48px;
+      width: 100%;
+    }
+
+    .main-wip img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Upload Images Section */
+    .upload-wips {
+      padding: 10px;
+    }
+
+    .upload-wips h2 {
+      margin: 0;
+      color: #fff;
+    }
+
+    .wip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .wip-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Upload2.html page */
+
+    .upload-container {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: #000000;
+      margin-bottom: 48px;
+    }
+
+    .upload-preview img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    .upload-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .upload-form label {
+      font-size: 12px;
+      color: #FFFFFF;
+      text-align: left;
+    }
+    
+    .upload-form input {
+      padding: 10px;
+      font-size: 13px;
+      border: 1px solid #EDB32B;
+      background-color: #F5F5F5;
+      border-radius: 5px;
+    }
+    
+    .toggle-options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .toggle-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #ffffff;
+    }
+    
+    .toggle-switch {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 90px;
+      height: 40px;
+      border: #EDB32B 3px solid;
+      border-radius: 200px;
+    }
+    
+    .switch input {
+      display: none;
+    }
+    
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000;
+      border-radius: 20px;
+      transition: background-color 0.4s;
+    }
+    
+    .slider::before {
+      position: absolute;
+      content: "";
+      width: 45px;
+      height: 30px;
+      left: 4px;
+      bottom: 5px;
+      background-color: #EDB32B;
+      border-radius: 100px;
+      transition: transform 0.4s;
+    }
+    
+
+    input:checked + .slider {
+      background-color: #EDB32B;
+    }
+    
+    input:checked + .slider::before {
+      transform: translateX(39px);
+      background-color: #ffffff;
+    }
+    
+    .yes-label, .no-label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      font-weight: bold;
+      color: #ffffff;
+      pointer-events: none;
+    }
+    
+    .yes-label {
+      left: 16px;
+    }
+    
+    .no-label {
+      right: 12px;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Post.html */
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   text-align: center;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-button:hover {
   background-color: #FFFFFF;
-  color: #7AA6EA;
-}
-
-.done-message {
-  margin-bottom: 120px;
-  margin-top: 40px;
-}
-
-
-
-
-
-
-
-
-/* profile.html */
-
-.profile-container {
-  width: 90%;
-  max-width: 440px;
-  margin: 0 auto;
-  text-align: center;
   padding-bottom: 20px;
 }
-
-  /* Profile Section */
-  .profile-section {
-    position: relative;
-    margin-bottom: 30px;
-  }
-  
-  .profile-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #979797;
-    display: inline-block;
-  }
-
-  .edit-icon {
-    position: absolute;
-    top: 60px;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    background-color: #FFFFFF;
-    color: #233C6C;
-    border-radius: 50%;
-    font-size: 12px;
-    padding: 3px;
-  }
-
-
-  .profile-name {
-    margin: 10px 0 5px;
-    font-size: 24px;
-  }
-  
-  .profile-email {
-    font-size: 16px;
-    font-weight: 300;
-    color: #FFFFFF;
-  }
-  
-  /* Account & Help Sections */
-  .account-section, .help-section {
-    text-align: left;
-    margin: 20px 0;
-  }
-  
-  .account-section h3, .help-section h3 {
-    font-size: 24px bold;
-    font-weight: 300;
-    margin-bottom: 10px;
-  }
-  
-  .account-section ul, .help-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .account-section ul li, .help-section ul li {
-    margin: 10px 0;
-  }
-  
-  .account-section ul li a, .help-section ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 15px;
-  }
-  
-  /* Logout Button */
-  .logout-button {
-    margin-top: 30px;
-  }
-  
-  .logout-button a {
-    display: inline-block;
-    background-color: #7AA6EA;
-    color: #FFFFFF;
-    font-size: 16px;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: background-color 0.3s;
-  }
-  
-  .logout-button a:hover {
-    background-color: #FFFFFF;
-    color: #7AA6EA;
-  }
-
-
-
-
-
-
-
-
-
-
-/* This is for faves.html */
-
-/* Sponsor Card */
-
-.sponsor-card {
-  background-color: #7AA6EA; /* Light blue card background */
-  border-radius: 10px;
+ 
+/* Carousel */
+.carousel {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 8px;
-  padding-bottom:24px;
-  padding-top:24px;
-  margin-top: 12px;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+/* Carousel Items */
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Images */
+.carousel-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
   margin-bottom: 24px;
 }
 
-.sponsor-image {
-  width: 100%;
-  height: 398px;
-  object-fit: cover;
+h1 {
+  font-size: 24px;
 }
 
-.sponsor-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+.carousel-item p {
+  margin-right: 12px;
+  margin-left: 12px;
 }
 
-.sponsor-name {
-  font-size: 18px;
+
+/* Buttons for Navigation */
+.prev-button, .next-button  {
+  background-color: #EDB32B;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
   font-weight: bold;
-  margin: 0;
-}
-
-.rating {
-  display: flex;
-  gap: 5px;
-  margin-top: 5px;
-}
-
-.rating span {
-  font-size: 18px;
-  color: #FFD700; /* Gold stars */
-}
-
-
-
-/* Action Buttons */
-.actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.action-button {
-  background-color: #7AA6EA;
-  padding: 5px;
-  margin-left: 48px;
-  margin-right: 48px;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
 }
 
-.action-button img {
+
+
+
+/* View Feedback Link */
+.view-feedback {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.view-feedback a {
+  text-decoration: none;
+  color: #EDB32B; /* Gold color */
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #EDB32B;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.view-feedback a:hover {
+  background-color: #EDB32B;
+  color: #FFFFFF; /* White text on hover */
+}
+
+
+
+/* Feedback Overlay */
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Ensure it appears on top */
+}
+
+.overlay-content {
+  position: absolute;
+  background-color: #EDB32B; /* Match your design color */
+  width: 75%;
+  max-width: 400px;
+  height: 500px;
+  margin: 15% 7.5%; /* Centered vertically and horizontally */
+  padding: 20px;
+  border-radius: 12px;
+  color: #000; /* Text color */
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 
-.action-button:hover {
-  transform: scale(1.1);
+/* Carousel Styling for Feedback Overlay */
+.overlay-content .carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-content .carousel-item {
+  display: none;
+  text-align: left;
+}
+
+.overlay-content .carousel-item.active {
+  display: block;
+}
+
+.overlay-content .prev-button3,
+.overlay-content .next-button3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+.overlay-content .prev-button3 {
+  left: 10px;
+}
+
+.overlay-content .next-button3 {
+  right: 10px;
 }
 
 
 
-/* Responsive Design */
-@media (max-width: 440px) {
-  .sponsor-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 
-  .sponsor-info {
-    align-items: center;
-  }
 
-  .actions {
-    justify-content: space-around;
-  }
+/* Progress Bar Styles */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.progress-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #000000;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.progress-circle {
+  position: relative;
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  padding: 5px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px; /* Default for rounded edges */
+  border-top-left-radius: 0; /* 90-degree angle at top-left */
+  z-index: 2;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.progress-circle.active {
+  background-color: #EDB32B;
+  color: #000;
+}
+
+.progress-line:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: #EDB32B;
+  z-index: 3;
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
 }

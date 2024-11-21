@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Step 2</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <!-- New Header with Close Icon and Next Step -->
+  <div class="upload-header">
+    <a href="upload1.html" class="close-icon">X</a>
+    <h2>NEW WIP</h2>
+    <a href="post.html">
+      <button>Post WIP</button>
+    </a>
+  </div>
+
+<!-- Content Section -->
+<div class="upload-container">
+    <div class="upload-preview">
+        <img src="images/wip1.png" alt="Uploaded Work in Progress">
+    </div>
+    <form class="upload-form">
+        <label for="project-name">PROJECT NAME</label>
+        <input type="text" id="project-name" placeholder="Enter project name">
+        
+        <label for="caption">CAPTION</label>
+        <input type="text" id="caption" placeholder="Enter a caption">
+        
+        <label for="tags">TAGS</label>
+        <input type="text" id="tags" placeholder="Add tags (separated by commas)">
+        
+        <div class="toggle-options">
+            <div class="toggle-group">
+                <span>POST TO COMMUNITY?</span>
+                <div class="toggle-switch">
+                  <label class="switch">
+                      <input type="checkbox" id="post-to-community">
+                      <span class="slider"></span>
+                      <span class="yes-label">YES</span>
+                      <span class="no-label">NO</span>
+                  </label>
+              </div>          
+            </div>
+            <div class="toggle-group">
+                <span>SEND ME POST REPLY NOTIFICATIONS</span>
+                <div class="toggle-switch">
+                  <label class="switch">
+                      <input type="checkbox" id="post-to-community">
+                      <span class="slider"></span>
+                      <span class="yes-label">YES</span>
+                      <span class="no-label">NO</span>
+                  </label>
+              </div>    
+            </div>
+            <div class="toggle-group">
+                <span>OPEN TO COLLABORATE?</span>
+                <div class="toggle-switch">
+                  <label class="switch">
+                      <input type="checkbox" id="post-to-community">
+                      <span class="slider"></span>
+                      <span class="yes-label">YES</span>
+                      <span class="no-label">NO</span>
+                  </label>
+              </div>
+            </div>
+            <div class="toggle-group">
+                <span>OPEN TO MENTOR?</span>
+                <div class="toggle-switch">
+                  <label class="switch">
+                      <input type="checkbox" id="post-to-community">
+                      <span class="slider"></span>
+                      <span class="yes-label">YES</span>
+                      <span class="no-label">NO</span>
+                  </label>
+              </div>              
+            </div>
+        </div>
+    </form>
+  </div>
+  
+
+
+  <!-- Bottom Navbar -->
+  <div class="bottom-navbar">
+    <a href="explore.html"><img src="images/explore1.png" alt="Explore"></a>
+    <a href="dash.html"><img src="images/dash1.png" alt="Dashboard"></a>
+    <a href="upload1.html"><img src="images/up1.png" alt="Upload"></a>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="js/index.js"></script>
+</html>
