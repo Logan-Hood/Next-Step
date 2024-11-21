@@ -1,213 +1,179 @@
-// index.js
-
-function login() {
-  // Simulate login by navigating to the dashboard page
-  window.location.href = "dash.html";
-}
+  // This is the Index.HTML login button
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Select the login button
+  const loginButton = document.querySelector(".login-button");
 
-
-
-
-
-
-
-// hamburger menu and profile menu overlay functions
-
-$(document).ready(function () {
-  // Open the hamburger menu overlay
-  $(".hamburger-menu").on("click", function () {
-      $(".menu-overlay").addClass("active");
-  });
-
-  // Open the profile menu overlay
-  $(".profile-icon").on("click", function () {
-      $(".profile-overlay").addClass("active");
-  });
-
-  // Close any overlay
-  $(".close-overlay").on("click", function () {
-      $(".menu-overlay, .profile-overlay").removeClass("active");
-  });
-
-  // Close the overlay when a link inside the overlay is clicked
-  $(".menu-overlay a, .profile-overlay a").on("click", function () {
-      $(".menu-overlay, .profile-overlay").removeClass("active");
+  // Add a click event listener to the button
+  loginButton.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default button behavior (optional)
+    
+    // Redirect to ready.html
+    window.location.href = "ready.html";
   });
 });
 
 
 
 
+  // This is the ready.HTML yes and no buttons
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  Carousels for post.html
-//  Carousels for first carousel
 document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector(".carousel");
-  const items = document.querySelectorAll(".carousel-item");
-  const prevButton = document.querySelector(".prev-button");
-  const nextButton = document.querySelector(".next-button");
+  // Select the "Yes" and "No" buttons
+  const yesButton = document.getElementById("yes-button");
+  const noButton = document.getElementById("no-button");
+
+  // Add a click event listener to the "Yes" button
+  yesButton.addEventListener("click", () => {
+    // Redirect to location.html
+    window.location.href = "location.html";
+  });
+
+  // Add a click event listener to the "No" button
+  noButton.addEventListener("click", () => {
+    // Redirect to index.html
+    window.location.href = "index.html";
+  });
+});
+
+
+
+
+  // This is the location.HTML back and next buttons
+
+document.addEventListener("DOMContentLoaded", () => {
+  const backButton = document.getElementById("back-button");
   
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    const offset = -currentIndex * 100; // Move to the current slide
-    carousel.style.transform = `translateX(${offset}%)`;
-
-    // Disable buttons if we're at the start or end
-    prevButton.disabled = (currentIndex === 0);
-    nextButton.disabled = (currentIndex === 3);
-  }
-
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) { // Only move if not at the first item
-      currentIndex -= 1;
-      updateCarousel();
-    }
+  // Navigate back to ready.html
+  backButton.addEventListener("click", () => {
+    window.location.href = "ready.html";
   });
-
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < items.length - 1) { // Only move if not at the last item
-      currentIndex += 1;
-      updateCarousel();
-    }
-  });
-
-  // Initialize the carousel position and button state
-  updateCarousel();
 });
-
-
-
-
-
-
-
-
-
-//  Carousels for comment carousel
 
 document.addEventListener("DOMContentLoaded", () => {
-  const feedbackLink = document.getElementById("view-feedback-link");
-  const feedbackOverlay = document.getElementById("feedback-overlay");
-  const closeFeedback = document.getElementById("close-feedback");
-  const feedbackCarouselItems = feedbackOverlay.querySelectorAll(".carousel-item");
-  const feedbackPrevButton = document.getElementById("feedback-prev");
-  const feedbackNextButton = document.getElementById("feedback-next");
+  const nextButton = document.getElementById("next-button");
+  
+  // Navigate to gender.html
+  nextButton.addEventListener("click", () => {
+    window.location.href = "gender.html";
+  });
+});
 
-  let feedbackCurrentIndex = 0;
 
-  // Function to update carousel visibility
-  function updateFeedbackCarousel() {
-    feedbackCarouselItems.forEach((item, index) => {
-      item.classList.toggle("active", index === feedbackCurrentIndex);
+// This is the gender.HTML back and next buttons
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const backButton = document.getElementById("back-button2");
+    
+    // Navigate back to ready.html
+    backButton.addEventListener("click", () => {
+      window.location.href = "location.html";
     });
-  }
-
-  // Show overlay when link is clicked
-  feedbackLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    feedbackOverlay.style.display = "block";
-    updateFeedbackCarousel();
   });
-
-  // Hide overlay when close button is clicked
-  closeFeedback.addEventListener("click", () => {
-    feedbackOverlay.style.display = "none";
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const nextButton = document.getElementById("next-button2");
+    
+    // Navigate to gender.html
+    nextButton.addEventListener("click", () => {
+      window.location.href = "comms.html";
+    });
   });
 
 
-  // Navigate to the previous comment
-  feedbackPrevButton.addEventListener("click", () => {
-    feedbackCurrentIndex =
-      (feedbackCurrentIndex - 1 + feedbackCarouselItems.length) % feedbackCarouselItems.length;
-    updateFeedbackCarousel();
+
+  // This is the comms.HTML back and next buttons
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const backButton = document.getElementById("back-button3");
+    
+    // Navigate back to ready.html
+    backButton.addEventListener("click", () => {
+      window.location.href = "gender.html";
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const nextButton = document.getElementById("next-button3");
+    
+    // Navigate to gender.html
+    nextButton.addEventListener("click", () => {
+      window.location.href = "found.html";
+    });
   });
 
-  // Navigate to the next comment
-  feedbackNextButton.addEventListener("click", () => {
-    feedbackCurrentIndex = (feedbackCurrentIndex + 1) % feedbackCarouselItems.length;
-    updateFeedbackCarousel();
+
+
+
+  // This is the found.HTML see sponsors
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const seeSponsorsButton = document.getElementById("see-sponsors-button");
+  
+    // Redirect to the sponsors page
+    seeSponsorsButton.addEventListener("click", () => {
+      window.location.href = "sponsor.html"; // Adjust this to the correct file name if needed
+    });
   });
 
-  // Optional: Hide overlay when clicking outside the content
-  feedbackOverlay.addEventListener("click", (event) => {
-    if (event.target === feedbackOverlay) {
-      feedbackOverlay.style.display = "none";
-    }
+
+
+
+
+
+  
+  
+   // This is the sponsor.HTML
+   // button to finish swiping
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const nextButton = document.getElementById("done-button");
+    
+    // Navigate to gender.html
+    nextButton.addEventListener("click", () => {
+      window.location.href = "done.html";
+    });
   });
-});
 
 
 
+  // This is the sponsor.HTML 
+    // the carousel 
 
-
-
-
-
-
-// Progress Bar Functionality
-
-// JavaScript for Progress Bar Functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const progressCircles = document.querySelectorAll(".progress-circle");
-  const progressLine = document.querySelector(".progress-line:before");
-  const prevButton = document.querySelector(".prev-button");
-  const nextButton = document.querySelector(".next-button");
-
-  let currentStep = 0; // Index of the active progress step
-
-  // Update progress bar visuals
-  function updateProgressBar() {
-      progressCircles.forEach((circle, index) => {
-          if (index <= currentStep) {
-              circle.classList.add("active");
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".carousel-card");
+      const rejectButton = document.getElementById("reject-button");
+      const acceptButton = document.getElementById("accept-button");
+    
+      let currentCard = 0;
+    
+      const updateCards = () => {
+        cards.forEach((card, index) => {
+          if (index === currentCard) {
+            card.style.transform = "scale(1)";
+            card.style.opacity = "1";
           } else {
-              circle.classList.remove("active");
+            card.style.transform = "scale(0.9)";
+            card.style.opacity = "0";
           }
-      });
+        });
+      };
+    
+      const swipeCard = (direction) => {
+        if (direction === "right" && currentCard < cards.length - 1) {
+          currentCard++;
+        } else if (direction === "left" && currentCard > 0) {
+          currentCard--;
+        }
+        updateCards();
+      };
+    
+      rejectButton.addEventListener("click", () => swipeCard("left"));
+      acceptButton.addEventListener("click", () => swipeCard("right"));
+    
+      // Initialize cards
+      updateCards();
+    });
 
-      // Calculate and set the progress line width
-      const percentage = (currentStep / (progressCircles.length - 1)) * 100;
-      progressLine.style.width = `${percentage}%`;
-  }
 
-  // Event listeners for buttons
-  prevButton.addEventListener("click", function () {
-      if (currentStep > 0) {
-          currentStep--;
-          updateProgressBar();
-      }
-  });
-
-  nextButton.addEventListener("click", function () {
-      if (currentStep < progressCircles.length - 1) {
-          currentStep++;
-          updateProgressBar();
-      }
-  });
-
-  // Initialize progress bar
-  updateProgressBar();
-});
